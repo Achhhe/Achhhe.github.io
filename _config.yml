@@ -1,9 +1,10 @@
 # Site settings
 title: He's Blog
+uptitle: He
 SEOTitle: He | Blog
 header-img: img/home-bg.jpg
-email: acehe9520@gmail.com
-description: "站在世界某个角落，看着日出日落"
+email: acehe9520@gmail.come
+description: ""
 keyword: ""
 url: ""              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
