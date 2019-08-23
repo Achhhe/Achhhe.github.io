@@ -2,11 +2,13 @@
 layout:     post
 title:      "ubuntu16.04  cuda10.1+matlab2014b+opencv3.3.1+caffe"
 subtitle:   "CSDN博客搬家系列"
-date:       2019-08-23 15:48:00
+date:       2019-08-20 15:48:00
 author:     "He"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 环境配置, caffe, opencv
+    - 环境配置
+	- caffe
+    - opencv
 ---
 
 > “Yeah It's on. ”
@@ -19,5 +21,5 @@ tags:
 偷个懒，直接附链接地址
 
 ## 链接地址
-[CSDN](https://blog.csdn.net/He_9520/article/details/99881020)
+[传送门](https://blog.csdn.net/He_9520/article/details/99881020)
 

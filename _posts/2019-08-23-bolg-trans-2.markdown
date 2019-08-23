@@ -1,0 +1,21 @@
+---
+layout:     post
+title:      "ubuntu16.04 titan rtx 24g +显卡驱动+cuda10.1+cudnn环境配置"
+subtitle:   "CSDN博客搬家系列"
+date:       2019-08-23 15:48:00
+author:     "He"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 环境配置 
+	- cuda
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+o(*////▽////*)q
+
+## 链接地址
+[传送门](https://blog.csdn.net/He_9520/article/details/99714635)
