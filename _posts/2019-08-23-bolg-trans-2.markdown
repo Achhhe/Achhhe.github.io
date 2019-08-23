@@ -6,7 +6,7 @@ date:       2019-08-23 15:48:00
 author:     "He"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 环境配置 
+    - envs config 
 	- cuda
 ---
 
