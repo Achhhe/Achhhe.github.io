@@ -1,0 +1,20 @@
+---
+layout:     post
+title:      "C++之函数对象（Function Object） & for_each"
+subtitle:   "CSDN博客搬家系列"
+date:       2019-08-24 15:48:00
+author:     "He"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - c++ 
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+╰(*°▽°*)╯
+
+## 链接地址
+[传送门](https://blog.csdn.net/He_9520/article/details/78241533)
