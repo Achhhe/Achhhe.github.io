@@ -6,10 +6,9 @@ date:       2019-08-24 15:48:00
 author:     "He"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - c++ 
-	- envs config
+    - c++
+    - envs config
 ---
-
 > “Yeah It's on. ”
 
 
