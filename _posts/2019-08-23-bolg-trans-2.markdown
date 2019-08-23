@@ -6,8 +6,8 @@ date:       2019-08-23 15:48:00
 author:     "He"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - envs config 
-	- cuda
+    - cuda
+    - envs config
 ---
 
 > “Yeah It's on. ”
