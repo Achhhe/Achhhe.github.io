@@ -1,0 +1,142 @@
+---
+layout:     post
+title:      "Recent works on image restoration"
+subtitle:   "github头发搬家系列"
+date:       2020-05-24 15:48:00
+author:     "He"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - github
+    - image restoration
+
+---
+
+> “Yeah It's on. ”
+
+# Image Restoration:trumpet::trumpet::trumpet:
+
+**Recent works on image restoration** :smile:
+
+## Contents
+
+* [Deraining](#deraining)
+* [Desnowing](#desnowing)
+* [Dehazing](#dehazing)
+* [Low-light Enhancement](#low-light-enhancement)
+* [Event Reconstruction](#event-reconstruction)
+
+## Deraining:cloud_with_lightning_and_rain:
+
+<div  align="center">    
+<img src="../img/in-post/figs/derain/rain1200.png" width = "800"  alt="haha" align=center />   
+<img src="../img/in-post/figs/derain/rain12.jpg" width = "800"  alt="haha" align=center />       
+</div>
+
+<div  align="center">    
+On synthesized images   
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/derain/real1.png" width = "800"  alt="haha" align=center />  
+<img src="../img/in-post/figs/derain/real2.png" width = "800"  alt="haha" align=center />
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/derain/real5.png" width = "800"  alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+On real-world images   
+</div>
+
+#### High-level vision tasks
+
+Object detection results with/without deraining. The labels and corresponding confidences are both given by [Google Vision API](https://cloud.google.com/vision/). (*left: rainy inputs; right: deraining results*)
+
+<div  align="center">    
+<img src="../img/in-post/figs/high-level/hl2.png" width = "800"   alt="haha" align=center />
+<img src="../img/in-post/figs/high-level/hl3.png" width = "800"  alt="haha" align=center />  
+<img src="../img/in-post/figs/high-level/hl4.png" width = "800"  alt="haha" align=center />  
+<img src="../img/in-post/figs/high-level/hl1.png" width = "800"  alt="haha" align=center /> 
+</div>
+
+## Desnowing:snowflake:
+
+<div  align="center">    
+<img src="../img/in-post/figs/desnow/desnow4.gif" width = "253"  alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow5.gif" width = "250" height = "190"  alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow12.gif" width = "250"  alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/desnow/desnow2.gif" width = "250"  alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow9.gif" width = "250" alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow3.gif" width = "250"  alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/desnow/desnow7.gif" width = "250" height="189"  alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow22.gif" width = "250" height = "190"  alt="haha" align=center />
+<img src="../img/in-post/figs/desnow/desnow10.gif" width = "250" height="190"  alt="haha" align=center />  
+</div>
+
+[More desnowing results](../img/in-post/figs/desnow/)
+
+## Dehazing:fog:
+
+<div  align="center">    
+<img src="../img/in-post/figs/dehaze/dehaze2.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze9.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze10.gif" width = "250" height="190"  alt="haha" align=center />
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/dehaze/dehaze5.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze1.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze12.gif" width = "250" height="190"  alt="haha" align=center />
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/dehaze/dehaze7.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze3.gif" width = "250" height="190"  alt="haha" align=center />
+<img src="../img/in-post/figs/dehaze/dehaze4.gif" width = "250" height="190"  alt="haha" align=center />
+</div>
+
+[More deshazing results](../img/in-post/figs/dehaze/)
+
+## Low-light Enhancement:high_brightness:
+
+<div  align="center">    
+<img src="../img/in-post/figs/lowlight/lowlight18.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight19.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight20.gif" width = "250"   alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/lowlight/lowlight8.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight3.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight9.gif" width = "250"   alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/lowlight/lowlight24.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight25.gif" width = "250"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight26.gif" width = "250"   alt="haha" align=center />  
+</div>
+
+<div  align="center">    
+<img src="../img/in-post/figs/lowlight/lowlight14.gif" width = "251"   alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight10.gif" width = "250" height="185"  alt="haha" align=center />
+<img src="../img/in-post/figs/lowlight/lowlight6.gif" width = "250"   alt="haha" align=center />  
+</div>
+
+[More low-light enhancement results](../img/in-post/figs/lowlight/)
+
+## Event Reconstruction
+
+ToDO
+
+## Reference
+
+[Single Image Deraining with Continuous Rain Density Estimation](https://github.com/Achhhe/CODE-Net)
+
