@@ -22,7 +22,7 @@ tags:
 * [Deraining](#deraining)
 * [Desnowing](#desnowing)
 * [Dehazing](#dehazing)
-* [Low-light Enhancement](#low-light-enhancement)
+* [Low Light Enhancement](#low-light-enhancement)
 * [Event Reconstruction](#event-reconstruction)
 
 ## Deraining:cloud_with_lightning_and_rain:
@@ -132,7 +132,7 @@ Object detection results with/without deraining. The labels and corresponding co
 
 [More low-light enhancement results](../img/in-post/figs/lowlight/)
 
-## Event Reconstruction
+## Event Reconstruction:camera:
 
 ToDO
 
