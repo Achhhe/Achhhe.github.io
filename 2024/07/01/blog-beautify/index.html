@@ -1,0 +1,1512 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hexo+matery博客搭建之主题美化, hexo,算法，计算机视觉，人工智能">
+    <meta name="description" content="记录学习之旅，巩固自我及启发后人">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>hexo+matery博客搭建之主题美化 | HeBlog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 7.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+   <style>
+    body{
+       background-image: url(/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <script src="/js/cursor.js"></script>
+
+    <!-- 白天和黑夜主题 -->
+<!-- <div class="sum-moon-box">
+  <a class=" waves-effect waves-light" onclick="switchNightMode()" title="深浅主题切换" >
+    <i id="sum-moon-icon" class="fas fa-moon" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div> -->
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>  
+</div>
+    <!-- <script>
+        /* 模式判断 */
+        if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        }
+    </script> -->
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">HeBlog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a class="modal-trigger waves-effect waves-light" onclick="switchNightMode()" title="深浅主题切换" >
+      <i id="sum-moon-icon" class="fa fa-moon" style="zoom: 0.7;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">HeBlog</div>
+        <div class="logo-desc">
+            
+            记录学习之旅，巩固自我及启发后人
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Achhhe" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/Achhhe" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/47.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo+matery博客搭建之主题美化</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: rgba(71, 22, 206, 0.74);
+        font-weight: 900;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: rgba(71, 22, 206, 0.74);
+        font-weight: 900;
+    }
+
+    /* toc按钮位置调整 */
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 75px;     /*原来为75*/
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">博客搭建</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                博客搭建
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-07-01
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;下载node.js和git&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;hexo博客美化&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;美化：代码高亮，行号显示，搜索，字数统计，emoji，&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;todo：看板娘，暗黑模式，樱花特效，右键定制，时光列表，个人相册&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;配置修改：个人简介，运行时间，主题颜色，文章加密，个人相册等&quot;}]}],&quot;p&quot;:{}}"></svg>
+</div>
+
+
+
+<blockquote>
+<p>脑图可拖动和放缩</p>
+</blockquote>
+<h3 id="定制化美化"><a href="#定制化美化" class="headerlink" title="定制化美化"></a>定制化美化</h3><h4 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h4><p>本人安装<code>hexo 7.2.0</code>，从 Hexo5.0 版本开始自带了 <code>prismjs</code> 代码语法高亮的支持</p>
+<p>如果你的博客中曾经安装过 <code>hexo-prism-plugin</code> 的插件，那么你须要执行 <code>npm uninstall hexo-prism-plugin</code> 来卸载掉它，否则生成的代码中会有 <code>{</code> 和 <code>}</code> 的转义字符。</p>
+<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并将 <code>prismjs.enable</code> 的值设置为 <code>true</code>，主要配置如下，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">syntax_highlighter</span><span class="token punctuation">:</span> prismjs
+<span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意：需要将<code>syntax_highlighter</code>值置为<code>prismjs</code></p>
+<h4 id="行号显示"><a href="#行号显示" class="headerlink" title="行号显示"></a>行号显示</h4><p>默认版本不显示行号，在主题<code>source/css/matery.css</code>添加</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.line-numbers-rows</span> <span class="token punctuation">{</span>
+    <span class="token property">border-right-width</span><span class="token punctuation">:</span> 0px <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line-numbers</span> <span class="token punctuation">{</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 1.5rem 1.5rem 1.5rem 3.5rem <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 1rem 0 <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #272822<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 0.35rem<span class="token punctuation">;</span>
+    <span class="token property">tab-size</span><span class="token punctuation">:</span> 4<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在主题下的<code>source/libs/prism/prism.css</code>添加</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">pre[class*="language-"].line-numbers</span> <span class="token punctuation">{</span>
+ <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+ <span class="token property">padding-left</span><span class="token punctuation">:</span> 3.8em<span class="token punctuation">;</span>
+ <span class="token property">counter-reset</span><span class="token punctuation">:</span> linenumber<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">pre[class*="language-"].line-numbers &gt; code</span> <span class="token punctuation">{</span>
+ <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+ <span class="token property">white-space</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.line-numbers .line-numbers-rows</span> <span class="token punctuation">{</span>
+ <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+ <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+ <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+ <span class="token property">font-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+ <span class="token property">left</span><span class="token punctuation">:</span> -3.8em<span class="token punctuation">;</span>
+ <span class="token property">width</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span> <span class="token comment">/* works for line-numbers below 1000 lines */</span>
+ <span class="token property">letter-spacing</span><span class="token punctuation">:</span> -1px<span class="token punctuation">;</span>
+ <span class="token property">border-right</span><span class="token punctuation">:</span> 1px solid #999<span class="token punctuation">;</span>
+
+ <span class="token property">-webkit-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+ <span class="token property">-moz-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+ <span class="token property">-ms-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+ <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+ <span class="token selector">.line-numbers-rows &gt; span</span> <span class="token punctuation">{</span>
+  <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">counter-increment</span><span class="token punctuation">:</span> linenumber<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+  <span class="token selector">.line-numbers-rows &gt; span:before</span> <span class="token punctuation">{</span>
+   <span class="token property">content</span><span class="token punctuation">:</span> <span class="token function">counter</span><span class="token punctuation">(</span>linenumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token property">color</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+   <span class="token property">padding-right</span><span class="token punctuation">:</span> 0.8em<span class="token punctuation">;</span>
+   <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><em>可以添加行号，但是竖线还是没显示，以后找机会学习下其他大佬的操作</em></p>
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="中文链接转拼音（建议安装）"><a href="#中文链接转拼音（建议安装）" class="headerlink" title="中文链接转拼音（建议安装）"></a>中文链接转拼音（建议安装）</h4><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 <code>SEO</code>，且 <code>gitment</code> 评论对中文链接也不支持。我们可以用 <a target="_blank" rel="noopener" href="https://github.com/viko16/hexo-permalink-pinyin">hexo-permalink-pinyin</a> Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
+<p>安装命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i hexo-permalink-pinyin <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">permalink_pinyin</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">separator</span><span class="token punctuation">:</span> <span class="token string">'-'</span> <span class="token comment"># default: '-'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="文章字数统计插件（建议安装）"><a href="#文章字数统计插件（建议安装）" class="headerlink" title="文章字数统计插件（建议安装）"></a>文章字数统计插件（建议安装）</h4><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a>插件。</p>
+<p>安装命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">--save</span> hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后只需在本主题下的 <code>_config.yml</code> 文件中，将各个文章字数相关的配置激活即可：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">postInfo</span><span class="token punctuation">:</span>
+  <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 发布日期</span>
+  <span class="token key atrule">update</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 更新日期</span>
+  <span class="token key atrule">wordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 文章字数统计</span>
+  <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 站点总文章字数</span>
+  <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 文章阅读时长</span>
+  <span class="token key atrule">readCount</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 文章阅读次数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="添加emoji表情支持（可选的）"><a href="#添加emoji表情支持（可选的）" class="headerlink" title="添加emoji表情支持（可选的）"></a>添加emoji表情支持（可选的）</h4><p>本主题新增了对<code>emoji</code>表情的支持，使用到了 <a target="_blank" rel="noopener" href="https://npm.taobao.org/package/hexo-filter-github-emojis">hexo-filter-github-emojis</a> 的 Hexo 插件来支持 <code>emoji</code>表情的生成，把对应的<code>markdown emoji</code>语法（<code>::</code>,例如：<code>:smile:</code> <span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>）转变成会跳跃的<code>emoji</code>表情，安装命令如下：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-filter-github-emojis <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre class="line-numbers language-none"><code class="language-none">githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>执行 <code>hexo clean &amp;&amp; hexo g</code> 重新生成博客文件，然后就可以在文章中对应位置看到你用<code>emoji</code>语法写的表情了</p>
+<h4 id="看板娘"><a href="#看板娘" class="headerlink" title="看板娘"></a>看板娘</h4><p><a target="_blank" rel="noopener" href="https://www.chensheng.group/2020/07/27/135-hexo%E7%9C%8B%E6%9D%BF%E5%A8%98/">参考</a></p>
+<h4 id="暗黑模式"><a href="#暗黑模式" class="headerlink" title="暗黑模式"></a>暗黑模式</h4><p>参考<a target="_blank" rel="noopener" href="https://blog.17lai.site/posts/4a2050e2/#%E6%B7%BB%E5%8A%A0%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2">夜法</a>大佬添加了深浅主题交换</p>
+<p>修改<code>themes&gt;hexo-theme-matery&gt;source&gt;css&gt;matery.css</code>参数，调整位置</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.sum-moon-box</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 10%<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 135px<span class="token punctuation">;</span>     <span class="token comment">/*调整位置*/</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 900<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>暂时可用，个人喜欢放在菜单导航栏，但是目前能力有限<span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+</blockquote>
+<p>原模板初始为浅色主题，但图标为太阳<code>fa-sun</code>，需要修改图标为月亮<code>fa-moon</code></p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sum-moon-box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">switchNightMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>深浅主题切换<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sum-moon-icon<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-moon<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span>48px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span>48px<span class="token punctuation">;</span> <span class="token property">font-size</span><span class="token punctuation">:</span> 28px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="收缩目录按钮"><a href="#收缩目录按钮" class="headerlink" title="收缩目录按钮"></a>收缩目录按钮</h4><p>目录收缩按钮，在<code>/themes/hexo-theme-matery/layout/_partial/post-detail-toc.ejs</code>中</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* toc按钮位置调整 */</span>
+<span class="token selector">#floating-toc-btn</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 135px<span class="token punctuation">;</span>     <span class="token comment">/*原来为75*/</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="返回顶部按钮"><a href="#返回顶部按钮" class="headerlink" title="返回顶部按钮"></a>返回顶部按钮</h4><p>位置调整在<code>themes&gt;hexo-theme-matery&gt;source&gt;css&gt;matery.css</code>中</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*回到顶部按钮样式*/</span>
+<span class="token selector">.top-scroll</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 135px<span class="token punctuation">;</span>  <span class="token comment">/*原来为15*/</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>增加”返回顶部”文字提示，在<code>themes\hexo-theme-matery\layout\_partial\back-top.ejs</code></p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>backTop<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>返回顶部<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-arrow-up<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="导航栏添加深浅主题切换按钮"><a href="#导航栏添加深浅主题切换按钮" class="headerlink" title="导航栏添加深浅主题切换按钮"></a>导航栏添加深浅主题切换按钮</h4><p>将<code>themes/hexo-theme-matery/layout/_partial/day-night.ejs</code>中原主题切换按钮注释掉</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- &lt;div class="sum-moon-box"&gt;
+  &lt;a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="深浅主题切换" &gt;
+    &lt;i id="sum-moon-icon" class="fas fa-moon" style="width:48px; height:48px; font-size: 28px;"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+&lt;/div&gt; --&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在导航栏文件<code>themes/hexo-theme-matery/layout/_partial/navigation.ejs</code>中的搜索后面添加主题切换按钮，同时去掉原样式<code>btn-floating</code>和<code>btn-large</code>，调整大小</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#searchModal<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-trigger waves-effect waves-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>searchIcon<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-search<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%=</span><span class="token language-javascript"> <span class="token function">__</span><span class="token punctuation">(</span><span class="token string">'search'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span><span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.85<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-trigger waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">switchNightMode</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>深浅主题切换<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sum-moon-icon<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-moon<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.7<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>2024.7.4：新发现个bug，深色主题+<span class="github-emoji"><span>☀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2600.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>图标情况下，刷新页面可以实现深色主题保持，但是图标会切回初始的<span class="github-emoji"><span>🌙</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f319.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>技术有限，不会图标保持操作，偷个懒，选择把图标固定为<code>fa fa-adjust</code>，同时将id改个名字</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sum-moon-icon1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-adjust<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">zoom</span><span class="token punctuation">:</span> 0.7<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<blockquote>
+<p>20247.6：学习<a target="_blank" rel="noopener" href="https://immortalqx.github.io/">LQX</a>博客发现，将黑夜模式判断放在<code>themes\hexo-theme-matery\source\js\matery.js</code>文件可以避免页面刷新时图标回到<span class="github-emoji"><span>🌙</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f319.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 黑夜模式判断</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'isDark'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'1'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'DarkMode'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#sum-moon-icon'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">"fa-sun"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token string">'fa-moon'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'DarkMode'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#sum-moon-icon'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeleClass</span><span class="token punctuation">(</span><span class="token string">"fa-sun"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'fa-moon'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>原<code>themes\hexo-theme-matery\layout\layout.ejs</code>中模式判断可以注释掉</p>
+</blockquote>
+<h4 id="鼠标光标星星拖尾"><a href="#鼠标光标星星拖尾" class="headerlink" title="鼠标光标星星拖尾"></a>鼠标光标星星拖尾</h4><p>在<code>themes/hexo-theme-matery/source/js</code>文件夹下新建<code>cursor.js</code>文件，并将<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.5/source/js/cursor.js">传送门</a>内容粘贴进去</p>
+<p>在<code>themes/hexo-theme-matery/layout/layout.ejs</code>内新增</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/js/cursor.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="樱花特效"><a href="#樱花特效" class="headerlink" title="樱花特效"></a>樱花特效</h4><p>Todo</p>
+<h4 id="鼠标点击特效"><a href="#鼠标点击特效" class="headerlink" title="鼠标点击特效"></a>鼠标点击特效</h4><p>Todo</p>
+<h4 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h4><p>修改的地方<code>themes/hexo-theme-matery/layout/_partial/footer.ejs</code>文件中，包括站点、使用的主题、访问量等</p>
+<h4 id="修改网站背景"><a href="#修改网站背景" class="headerlink" title="修改网站背景"></a>修改网站背景</h4><p>修改主题配置文件对应参数，<code>themes/hexo-theme-matery/_config.yml</code></p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 网站背景图</span>
+<span class="token key atrule">background</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">url</span><span class="token punctuation">:</span> /medias/background.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="时光列表"><a href="#时光列表" class="headerlink" title="时光列表"></a>时光列表</h4><p>Todo</p>
+<h4 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h4><p>安装脑图插件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-markmap<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>绘图，可缩放，平移</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">{% markmap 400px %}
+<span class="token list punctuation">-</span> 下载node.js和git
+<span class="token list punctuation">-</span> hexo博客美化
+  <span class="token list punctuation">-</span> 美化：代码高亮，行号显示，搜索，字数统计，emoji，
+  <span class="token list punctuation">-</span> todo：看板娘，暗黑模式，樱花特效，右键定制，时光列表，个人相册
+  <span class="token list punctuation">-</span> 配置修改：个人简介，运行时间，主题颜色，文章加密，个人相册等
+{% endmarkmap %}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>存在问题：latex公式显示异常，深色主题脑图文字不适配</p>
+</blockquote>
+<h3 id="模板配置修改"><a href="#模板配置修改" class="headerlink" title="模板配置修改"></a>模板配置修改</h3><p>修改根目录下<code>_config.yaml</code>配置</p>
+<h4 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h4><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> HeBlog
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> <span class="token string">'苟日新，日日新，又日新'</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'记录学习之旅，巩固自我及启发后人'</span>
+<span class="token key atrule">keywords</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>hexo<span class="token punctuation">,</span> 算法，计算机视觉，人工智能<span class="token punctuation">]</span>
+<span class="token key atrule">author</span><span class="token punctuation">:</span> Achhhe
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="主题配置修改"><a href="#主题配置修改" class="headerlink" title="主题配置修改"></a>主题配置修改</h3><h4 id="关闭contact和friends"><a href="#关闭contact和friends" class="headerlink" title="关闭contact和friends"></a>关闭contact和friends</h4><p>初始模板带有<code>Contact</code>和<code>Friends</code>选项，但是没有对应页面。如果不想创建，可以直接修改<code>/themes/hexo-theme-matery/_config.yaml</code>对应配置进行关闭</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">menu</span><span class="token punctuation">:</span>
+  <span class="token key atrule">Index</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> /
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>home
+  <span class="token key atrule">Tags</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> /tags
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>tags
+  <span class="token key atrule">Categories</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> /categories
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>bookmark
+  <span class="token key atrule">Archives</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> /archives
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>archive
+  <span class="token key atrule">About</span><span class="token punctuation">:</span>
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> /about
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>user<span class="token punctuation">-</span>circle
+  <span class="token comment">#Contact:</span>
+   <span class="token comment">#url: /contact</span>
+   <span class="token comment">#icon: fas fa-comments</span>
+  <span class="token comment">#Friends:</span>
+   <span class="token comment">#url: /friends</span>
+   <span class="token comment">#icon: fas fa-address-book</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="修改个人简介"><a href="#修改个人简介" class="headerlink" title="修改个人简介"></a>修改个人简介</h4><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">profile</span><span class="token punctuation">:</span>
+  <span class="token key atrule">avatar</span><span class="token punctuation">:</span> /medias/avatar.jpg
+  <span class="token key atrule">career</span><span class="token punctuation">:</span> Algorithm Engineer
+  
+<span class="token key atrule">mySkills</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">data</span><span class="token punctuation">:</span>
+    <span class="token key atrule">Python</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 90%
+    <span class="token key atrule">Low Level Vision</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 90%
+    <span class="token key atrule">C/C++</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 60%
+    <span class="token key atrule">Self-Supervised Learning</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 90%
+    <span class="token key atrule">Pytorch</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 85%
+    <span class="token key atrule">Liveness Detection</span><span class="token punctuation">:</span>
+      <span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'</span>
+      <span class="token key atrule">percent</span><span class="token punctuation">:</span> 85%
+      
+<span class="token key atrule">githubLink</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/Achhhe
+  <span class="token key atrule">title</span><span class="token punctuation">:</span> Fork Me<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="站点初始运行时间"><a href="#站点初始运行时间" class="headerlink" title="站点初始运行时间"></a>站点初始运行时间</h4><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 站点运行开始时间.</span>
+<span class="token key atrule">time</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">year</span><span class="token punctuation">:</span> <span class="token number">2024</span> <span class="token comment"># 年份</span>
+  <span class="token key atrule">month</span><span class="token punctuation">:</span> <span class="token number">06</span> <span class="token comment"># 月份</span>
+  <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token number">29</span> <span class="token comment"># 日期</span>
+  <span class="token key atrule">hour</span><span class="token punctuation">:</span> <span class="token number">00</span> <span class="token comment"># 小时</span>
+  <span class="token key atrule">minute</span><span class="token punctuation">:</span> <span class="token number">00</span> <span class="token comment"># 分钟</span>
+  <span class="token key atrule">second</span><span class="token punctuation">:</span> <span class="token number">00</span> <span class="token comment"># 秒</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="其他打开或关闭"><a href="#其他打开或关闭" class="headerlink" title="其他打开或关闭"></a>其他打开或关闭</h4><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">mathjax</span><span class="token punctuation">:</span>  <span class="token comment"># 数学公式，全局开关</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  
+<span class="token key atrule">music</span><span class="token punctuation">:</span>   <span class="token comment"># 音乐插件</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">2097531989</span>  <span class="token comment"># 对应歌单id</span>
+  
+<span class="token key atrule">reward</span><span class="token punctuation">:</span>  <span class="token comment"># 打赏功能</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+<span class="token key atrule">myProjects</span><span class="token punctuation">:</span>  <span class="token comment"># 个人工程</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+<span class="token key atrule">myGallery</span><span class="token punctuation">:</span>   <span class="token comment"># 个人相册</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  
+<span class="token key atrule">ribbon_dynamic</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+
+<span class="token key atrule">sharejs</span><span class="token punctuation">:</span>  <span class="token comment">#分享模块</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">sites</span><span class="token punctuation">:</span> qq<span class="token punctuation">,</span>qzone<span class="token punctuation">,</span>wechat<span class="token punctuation">,</span>weibo<span class="token punctuation">,</span>google
+
+<span class="token key atrule">verifyPassword</span><span class="token punctuation">:</span>  <span class="token comment"># 文章验证密码 SHA256加密</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其他配置可根据个人喜好进行修改，包括：</p>
+<blockquote>
+<ul>
+<li>菜单</li>
+<li>我的梦想</li>
+<li>首页的音乐播放器和视频播放器配置</li>
+<li>是否显示推荐文章名称和按钮配置</li>
+<li><code>favicon</code> 和 <code>Logo</code></li>
+<li><strong>个人信息</strong></li>
+<li><strong>文章加密</strong></li>
+<li>TOC 目录</li>
+<li>文章打赏信息</li>
+<li>复制文章内容时追加版权信息</li>
+<li><strong>MathJax</strong></li>
+<li><strong>文章字数统计、阅读时长</strong></li>
+<li>点击页面的’爱心’效果</li>
+<li>我的项目</li>
+<li><strong>我的技能</strong></li>
+<li><strong>我的相册</strong></li>
+<li><code>Gitalk</code>、<code>Gitment</code>、<code>Valine</code> 和 <code>disqus</code> 评论配置</li>
+<li><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>和谷歌分析（<code>Google Analytics</code>）</li>
+<li>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 <code>hashcode</code> 值取余，来选择展示对应的特色图</li>
+</ul>
+</blockquote>
+<p>如果不满意本主题中的诸多功能和主题色彩，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 <code>_config.yml</code> 中完成，需要修改源代码才来完成</p>
+<p>以下列出修改颜色和图片</p>
+<h4 id="修改主题颜色"><a href="#修改主题颜色" class="headerlink" title="修改主题颜色"></a>修改主题颜色</h4><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span>
+<span class="token selector">.bg-color</span> <span class="token punctuation">{</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>200<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">)</span> 40%<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>200<span class="token punctuation">,</span>0.5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rainbow</span> <span class="token punctuation">{</span>
+   <span class="token comment">/* 动态切换背景颜色. */</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@keyframes</span> rainbow</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 动态切换背景颜色. */</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>CSS函数<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient">linear-gradient</a>创建一个由两种或多种颜色沿一条直线进行线性过渡的图像</p>
+<p>本博客设置$45^{\circ}$渐变，起始为红色系，在$40$%处变为蓝色系</p>
+<h4 id="修改-banner-图和文章特色图"><a href="#修改-banner-图和文章特色图" class="headerlink" title="修改 banner 图和文章特色图"></a>修改 banner 图和文章特色图</h4><p>你可以直接在 <code>/source/medias/banner</code> 文件夹中更换你喜欢的 <code>banner</code> 图片，主题代码中是每天动态切换一张，只需 <code>7</code> 张即可。如果你会 <code>JavaScript</code> 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，<code>banner</code> 切换的代码位置在 <code>/layout/_partial/bg-cover-content.ejs</code> 文件的 `` 代码中：</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs">$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 <code>/source/medias/featureimages</code> 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 <code>_config.yml</code> 做同步修改。</p>
+<blockquote>
+<p>banner图太大可能显示红色背景，<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/528">传送门</a></p>
+<p>图片源自<a target="_blank" rel="noopener" href="https://immortalqx.github.io/">LQX</a>博客，感谢<span class="github-emoji"><span>😃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+</blockquote>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dm900work/article/details/121332092">行号显示</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.dreamruins.com/tutorials/1121281946">暗黑主题-Ruins</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.17lai.site/posts/4a2050e2/">夜法之书</a></p>
+<p><a target="_blank" rel="noopener" href="https://immortalqx.github.io/">LQX</a></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">博客搭建</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,google" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/07/03/hexo-github-deploy/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/50.jpg" class="responsive-img" alt="Hexo+matery博客搭建之Github部署">
+                        
+                        <span class="card-title">Hexo+matery博客搭建之Github部署</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
+                    <a href="/tags/Github/">
+                        <span class="chip bg-color">Github</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/06/30/insert-image-in-hexo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Hexo+matery博客搭建之插入图片">
+                        
+                        <span class="card-title">Hexo+matery博客搭建之插入图片</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-06-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo/" class="post-category">
+                                    Hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2024-2025</span>
+            
+            <span id="year">2024</span>
+            <a href="/about" target="_blank">Achhhe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">7.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;</span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;</span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2024";
+                    var startMonth = "6";
+                    var startDate = "29";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Achhhe/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2238371421@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!" title="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+}
+
+<script src="/js/markmap.js"></script></body>
+
+</html>
